@@ -1,0 +1,24 @@
+//
+//  CircleImage.swift
+//  iOS_Combining_Views
+//
+//  Created by noseeevil on 18.04.2022.
+//
+
+import SwiftUI
+
+struct CircleImage: View {
+    var body: some View {
+        Image("glevaha").clipShape(Circle())
+            .overlay{
+                Circle().stroke(.white, lineWidth: 4)
+            }
+            .shadow(radius: 7)
+    }
+}
+
+struct CircleImage_Previews: PreviewProvider {
+    static var previews: some View {
+        CircleImage()
+    }
+}
